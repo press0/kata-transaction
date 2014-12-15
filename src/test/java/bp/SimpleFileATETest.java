@@ -18,7 +18,7 @@ public class SimpleFileATETest {
 	public void setUp() throws IOException, URISyntaxException {
 		URI resourceUrl = getClass().getResource(TEST_FILE).toURI();
 		ate = new SimpleFileAte();
-		ate.readTransactionFile(resourceUrl);
+		ate.readTransactions(resourceUrl);
 	}
 
 	@Test

@@ -27,13 +27,13 @@ public class SimpleFileAte implements Ate {
 
 	static public void main(String[] args) throws IOException, URISyntaxException {
 		Ate ate = new SimpleFileAte();
-		ate.readTransactionFile(new URI(args[0]));
+		ate.readTransactions(new URI(args[0]));
 		ate.processTransactions();
 		ate.printAccounts();
 	}
 
 	@Override
-	public void readTransactionFile(URI uri) throws IOException, URISyntaxException {
+	public void readTransactions(URI uri) throws IOException, URISyntaxException {
 		File file = new File(uri);
 		FileReader fr = new FileReader(file);
 		BufferedReader br = new BufferedReader(fr);

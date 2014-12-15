@@ -8,7 +8,7 @@ import java.net.URISyntaxException;
  * Created by q on 12/12/14.
  */
 public interface Ate {
-    void readTransactionFile(URI uri) throws IOException, URISyntaxException;
+    void readTransactions(URI uri) throws IOException, URISyntaxException;
     void processTransactions();
     void printAccounts();
 }
